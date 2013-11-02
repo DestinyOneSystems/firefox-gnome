@@ -1,0 +1,357 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+/* ::::: Toolbars ::::: */
+
+#navigator-toolbox {
+  border-bottom: 1px solid #a7aba7;
+}
+
+#TabsToolbar::after {
+  border-bottom: 1px solid #a7aba7;
+}
+
+#nav-bar {
+  background: linear-gradient(to bottom, #fff, #f3f3f3);
+}
+
+#nav-bar ~ toolbar {
+  /* FIXME */
+  background: #f3f3f3 !important;
+}
+
+/* ::::: Tabs ::::: */
+
+.tab-throbber {
+  list-style-image: url(chrome://gnome/skin/browser/tabbrowser/connecting.png);
+}
+
+.tab-throbber[progress] {
+  list-style-image: url(chrome://gnome/skin/browser/tabbrowser/loading.png);
+}
+
+.tab-drop-indicator {
+  list-style-image: url(chrome://gnome/skin/browser/tabbrowser/tabDragIndicator.png);
+}
+
+.tab-close-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/close.svg);
+}
+.tab-close-button > .toolbarbutton-icon {
+  opacity: .4;
+}
+.tab-close-button:hover > .toolbarbutton-icon {
+  opacity: 1;
+}
+
+.tab-background-start[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-end[selected=true]:-moz-locale-dir(rtl)::after {
+  background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-stroke-start.png);
+}
+
+.tab-background-end[selected=true]:-moz-locale-dir(ltr)::after,
+.tab-background-start[selected=true]:-moz-locale-dir(rtl)::after {
+  background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-stroke-end.png);
+}
+
+.tab-background-middle[selected=true] {
+  background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-active-middle.png) !important;
+}
+
+.tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected=true]),
+.tabs-newtab-button:hover {
+  background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-background-start.png),
+                    url(chrome://gnome/skin/browser/tabbrowser/tab-background-middle.png),
+                    url(chrome://gnome/skin/browser/tabbrowser/tab-background-end.png);
+}
+
+#tabbrowser-tabs[movingtab] > .tabbrowser-tab[beforeselected]:not([last-visible-tab])::after,
+.tabbrowser-tab:not([selected]):not([afterselected-visible]):not([afterhovered]):not([first-visible-tab]):not(:hover)::before,
+#tabbrowser-tabs:not([overflow]) > .tabbrowser-tab[last-visible-tab]:not([selected]):not([beforehovered]):not(:hover)::after {
+  background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-separator.png);
+}
+
+/* */
+
+.tab-background-start[selected=true]::before,
+.tab-background-end[selected=true]::before {
+  background: none !important;
+}
+
+.tab-background-start[selected=true]:-moz-lwtheme::before,
+.tab-background-end[selected=true]:-moz-lwtheme::before {
+  clip-path: none;
+}
+
+/* ::::: Icons ::::: */
+
+#back-button,
+#forward-button:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg);
+  -moz-image-region: auto;
+}
+
+#forward-button,
+#back-button:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg);
+  -moz-image-region: auto;
+}
+
+#home-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/user-home.svg);
+  -moz-image-region: auto;
+}
+
+#PanelUI-menu-button,
+#preferences-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/emblem-system.svg);
+  -moz-image-region: auto;
+}
+
+#downloads-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/download.svg);
+  -moz-image-region: auto;
+}
+
+#privatebrowsing-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/privatebrowsing.svg);
+  -moz-image-region: auto;
+}
+
+#bookmarks-menu-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/bookmark-new.svg);
+  -moz-image-region: auto;
+}
+#bookmarks-menu-button[cui-areatype="toolbar"][starred] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/user-bookmarks.svg);
+  -moz-image-region: auto;
+}
+#bookmarks-menu-button[cui-areatype="toolbar"] > .toolbarbutton-menubutton-dropmarker > .dropmarker-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/view-more.svg);
+  -moz-image-region: auto;
+}
+
+.tabs-newtab-button,
+#TabsToolbar > #new-tab-button ,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/list-add.svg);
+}
+
+/* ::::: Location bar, Search bar ::::: */
+
+#urlbar, .searchbar-textbox {
+  -moz-appearance: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.8));
+  border: 1px solid rgba(50,50,50,.4);
+  border-radius: 3px;
+  box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.15), 0px 1px 0 0 rgba(255,255,255,0.37);
+  color: #2e3436;
+  margin: 0px 3px;
+  min-height: 28px;
+  overflow: hidden;
+  transition-property: border, box-shadow;
+  transition-duration: 200ms;
+}
+
+#urlbar[focused="true"], .searchbar-textbox[focused="true"] {
+  border-color: #729fcf;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6), inset 0 1px 2px 0 rgba(0,106,221,0.3);
+}
+
+/* History dropmarker */
+
+.urlbar-history-dropmarker {
+  -moz-appearance: none;
+  -moz-box-align: center !important;
+  min-height: 26px;
+  min-width: 26px;
+  padding: 5px;
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-down.svg);
+  opacity: .35;
+}
+
+.urlbar-history-dropmarker:hover,
+.urlbar-history-dropmarker[open="true"] {
+  opacity: 1;
+}
+
+/* Combined go/reload/stop button in location bar */
+
+#urlbar > toolbarbutton {
+  min-height: 26px;
+  padding: 5px;
+  min-width: 26px;
+  cursor: inherit;
+  list-style-image: none;
+  -moz-image-region: auto !important;
+}
+
+#urlbar > toolbarbutton:not([disabled="true"]):hover {
+  background: none !important;
+}
+
+#urlbar > toolbarbutton:not([disabled="true"]):active {
+  background: linear-gradient(to bottom, #d1d1d1, #fff) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15);
+}
+
+#urlbar-go-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg) !important;
+}
+#urlbar-go-button:-moz-locale-dir(rtl) > .toolbarbutton-icon {
+  transform: scaleX(-1);
+}
+
+#urlbar-reload-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/view-refresh.svg) !important;
+}
+
+#urlbar-stop-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/process-stop.svg) !important;
+}
+
+#urlbar-go-button,
+#urlbar-stop-button,
+#urlbar-reload-button {
+  opacity: .35;
+}
+
+#urlbar-go-button:hover,
+#urlbar-reload-button:hover,
+#urlbar-stop-button:hover {
+  opacity: 1;
+}
+
+/* Search bar */
+
+.searchbar-engine-image {
+  margin: 0;
+}
+
+.searchbar-engine-button {
+  height: 26px;
+  min-width: 26px;
+  padding: 5px;
+}
+
+.searchbar-engine-button:active, .searchbar-engine-button[open="true"] {
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+}
+
+.searchbar-engine-button > .button-box {
+  padding: 0;
+}
+
+.searchbar-dropmarker-image {
+  display: none;
+}
+
+.search-go-container {
+  opacity: .35;
+}
+
+.search-go-container:hover {
+  opacity: 1;
+}
+
+.search-go-container:active {
+  background-image: linear-gradient(to bottom, #d1d1d1, #ffffff) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(0,0,0,0.15) !important;
+}
+
+.search-go-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/edit-find.svg);
+  height: 26px;
+  min-width: 26px;
+  padding: 5px;
+}
+
+/* page proxy icon */
+
+#page-proxy-favicon {
+  margin: 2px;
+  -moz-margin-start: 4px;
+  -moz-margin-end: 3px;
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/identity-icons-generic.svg);
+  opacity: 0.35;
+}
+
+.chromeUI > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/identity-icons-brand.svg);
+}
+
+.verifiedDomain > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/identity-icons-https.svg);
+}
+
+.verifiedIdentity > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/identity-icons-https-ev.svg);
+  opacity: 0.6;
+}
+
+.mixedActiveContent > #page-proxy-favicon[pageproxystate="valid"],
+.mixedDisplayContent > #page-proxy-favicon[pageproxystate="valid"],
+.mixedDisplayContentLoadedActiveBlocked > #page-proxy-favicon[pageproxystate="valid"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/identity-icons-https-mixed-active.svg);
+  opacity: 0.6;
+}
+
+#page-proxy-favicon[pageproxystate="invalid"] {
+  opacity: 0.3;
+}
+
+#identity-popup.chromeUI > #identity-popup-container > #identity-popup-icon {
+  list-style-image: url("chrome://branding/content/icon64.png");
+}
+
+#identity-box:hover > #page-proxy-favicon,
+#identity-box:hover:active > #page-proxy-favicon,
+#identity-box[open=true] > #page-proxy-favicon {
+  -moz-image-region: auto;
+  opacity: 1;
+}
+
+/* Identity indicator */
+#identity-box {
+  margin: 0;
+  min-width: 26px;
+}
+
+#identity-box:hover:active,
+#identity-box[open="true"] {
+  background: linear-gradient(to bottom, #d1d1d1, #fff);
+  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI {
+  background: rgba(200, 200, 200, 0.15);
+  border-right: 1px solid rgba(100, 100, 100, 0.25);
+  -moz-margin-end: 4px;
+}
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI:hover:active,
+#urlbar[pageproxystate="valid"] > #identity-box.chromeUI[open="true"] {
+  background: linear-gradient(to bottom, #d1d1d1, #fff);
+  box-shadow: inset 0 1px 1px -1px rgba(0,0,0,0.15);
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity {
+  background: rgba(115, 210, 22, 0.15);
+  border-right: 1px solid rgba(115, 210, 22, 0.25);
+  color: #00aa00;
+  -moz-margin-end: 4px;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
+  background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
+}
+
+/* ::::: Toolbarbuttons ::::: */
+
+
+/* ::::: Fullscreen window controls ::::: */

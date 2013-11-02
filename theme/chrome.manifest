@@ -1,10 +1,3 @@
-skin    browser         Adwaita     chrome/browser/
-skin    communicator    Adwaita     chrome/communicator/
-skin    global          Adwaita     chrome/global/
-skin    mozapps         Adwaita     chrome/mozapps/
+skin     gnome           Adwaita     chrome/gnome/
 
-#skin    appversion      Adwaita     chrome/appversion/25/ appversion<26a1
-#skin    appversion      Adwaita     chrome/appversion/26/ appversion>=26a1
-
-skin    os              Adwaita     chrome/os/windows/     os=WINNT
-skin    os              Adwaita     chrome/os/linux/       os!=WINNT
+style chrome://browser/content/browser.xul chrome://gnome/skin/browser/browser.css
