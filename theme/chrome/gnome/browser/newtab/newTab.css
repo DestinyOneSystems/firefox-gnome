@@ -1,0 +1,130 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* SCROLLBOX */
+#newtab-scrollbox:not([page-disabled]) {
+  background-color: rgb(229,229,229);
+  background-image: url(chrome://browser/skin/devtools/noise.png),
+                     linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,.2));
+  background-attachment: fixed;
+}
+
+/* SIDE MARGIN */
+.newtab-side-margin {
+  /*
+  width: 150px;
+  */
+  width: 350px; /* Should give a nice squarish thumbnails */
+  min-width: 10px;
+}
+
+/* UNDO */
+.newtab-undo-button {
+  color: #3b6aa7;
+}
+
+#newtab-undo-close-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/close.svg);
+}
+
+#newtab-undo-close-button > .toolbarbutton-icon {
+  opacity: .4;
+}
+
+#newtab-undo-close-button:hover > .toolbarbutton-icon {
+  opacity: 1;
+}
+
+/* CELLS */
+.newtab-cell {
+  border-radius: 3px;
+}
+
+.newtab-cell:empty {
+  border-radius: 3px;
+}
+
+/* SITES */
+.newtab-site {
+  transition-duration: 0.5s;
+
+  /* Consistency FTW, Comment out to go back to the madness */
+  background:  url(chrome://gnome/skin/browser/symbolic-icons/newtab-placeholder.svg) no-repeat;
+  background-size: 96px;
+  background-position: 50% calc(50% - (24px / 2)); /* Half height, compensate for text title */
+}
+
+/* THUMBNAILS */
+.newtab-thumbnail {
+  background-position: 0 0;
+  opacity: 1;
+}
+
+/* TITLES */
+.newtab-title {
+  background-color: rgb(229,229,229);
+  background-image: url(chrome://browser/skin/devtools/noise.png),
+                     linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,.2));
+  background-attachment: fixed;
+  color: rgba(0,0,0,0.55);
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  border-top: 1px solid;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+  font-size: 100%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+  border-radius: 0 0 2px 2px;
+  text-align: center;
+}
+
+.newtab-cell:hover .newtab-title {
+  background-image: none;
+  background-color: rgba(0,0,0,0.8);
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+
+/* CONTROLS */
+.newtab-control {
+  width: 16px;
+  height: 16px;
+  background: none;
+}
+
+.newtab-control::-moz-focus-inner { 
+  border: none;
+}
+
+.newtab-control-pin {
+  background: url(chrome://gnome/skin/browser/symbolic-icons/pin_white.svg) no-repeat center;
+  background-color: rgba(0,0,0,0.25);
+  background-position: 0 0 !important;
+  border-radius: 50%;
+}
+
+.newtab-control-pin[pinned] {
+  background-color: rgba(0,0,0,0.55);
+  -moz-transform: rotate(30deg);
+}
+
+.newtab-control-pin[pinned]:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+
+.newtab-control-block {
+  background: url(chrome://gnome/skin/browser/symbolic-icons/close_white.svg) no-repeat center;
+  background-color: rgba(0,0,0,0.25);
+  background-position: 0 0 !important;
+  border-radius: 50%;
+}
+
+.newtab-control-block:hover {
+  background-color: rgba(0,0,0,0.85);
+}
+
+.newtab-control-pin,
+.newtab-control-block,
+.newtab-title {
+  transition-property: background-color, color, text-shadow;
+  transition-duration: 0.4s;
+}
