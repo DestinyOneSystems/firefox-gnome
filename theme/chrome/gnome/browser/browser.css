@@ -112,11 +112,6 @@
   -moz-image-region: auto;
 }
 
-#downloads-button[cui-areatype="toolbar"] {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/download.svg);
-  -moz-image-region: auto;
-}
-
 #privatebrowsing-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/privatebrowsing.svg);
   -moz-image-region: auto;
@@ -139,6 +134,31 @@
 #TabsToolbar > #new-tab-button ,
 #TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
   list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/list-add.svg);
+}
+
+/* Downloads button */
+
+#downloads-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/download.svg);
+  -moz-image-region: auto;
+}
+
+#downloads-button[cui-areatype="toolbar"] > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background: -moz-image-rect(url(chrome://gnome/skin/browser/symbolic-icons/download.svg),
+                              0, 16, 16, 0) center no-repeat;
+}
+
+#downloads-button[cui-areatype="toolbar"][attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
+  background-image: url(chrome://gnome/skin/browser/symbolic-icons/download-glow.svg);
+}
+
+#downloads-button:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background: -moz-image-rect(url(chrome://gnome/skin/browser/symbolic-icons/download.svg),
+                              0, 16, 16, 0) center no-repeat;
+}
+
+#downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
+  background-image: url(chrome://gnome/skin/browser/symbolic-icons/download-glow.svg);
 }
 
 /* ::::: Location bar, Search bar ::::: */
