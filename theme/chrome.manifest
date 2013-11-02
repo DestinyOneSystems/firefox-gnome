@@ -1,3 +1,4 @@
 skin     gnome           Adwaita     chrome/gnome/
 
 style chrome://browser/content/browser.xul chrome://gnome/skin/browser/browser.css
+style chrome://browser/content/places/places.xul chrome://gnome/skin/browser/places/organizer.css

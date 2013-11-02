@@ -1,0 +1,58 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* Toolbar */
+
+#placesToolbar {
+  -moz-appearance: none;
+  background-color: Window;
+  border: none;
+  border-bottom: 1px solid #a7aba7 !important;
+  -moz-binding: url(chrome://global/content/bindings/general.xml#windowdragbox);
+  padding: 4px 3px;
+}
+
+/* Back button */
+
+#back-button,
+#back-button[disabled="true"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg);
+}
+#back-button:-moz-locale-dir(rtl),
+#back-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg);
+}
+#back-button[disabled="true"] > .toolbarbutton-icon {
+  opacity: .3;
+}
+
+/* Forward button */
+
+#forward-button,
+#forward-button[disabled="true"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg);
+}
+#forward-button:-moz-locale-dir(rtl),
+#forward-button[disabled="true"]:-moz-locale-dir(rtl) {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg);
+}
+#forward-button[disabled="true"] > .toolbarbutton-icon {
+  opacity: .3;
+}
+
+/* Left box */
+
+#placesList {
+  background: Window;
+}
+
+#placesList + splitter + #contentView {
+  -moz-border-start: 1px solid #a7aba7;
+}
+
+/* Info box */
+
+#detailsDeck {
+  border-top: 1px solid #a7aba7;
+}
