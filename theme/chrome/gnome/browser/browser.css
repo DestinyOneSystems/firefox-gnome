@@ -2,6 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+@import url("chrome://gnome/skin/browser/extensions/extensions.css");
+
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
@@ -374,4 +376,56 @@
 /* ::::: Toolbarbuttons ::::: */
 
 
-/* ::::: Fullscreen window controls ::::: */
+/* ::::: Window controls ::::: */
+
+#window-controls {
+  overflow: hidden;
+  margin: 0 3px;
+}
+
+#toolbar-menubar > #window-controls {
+  margin: 0;
+  -moz-margin-end: 6px;
+}
+
+#TabsToolbar > #window-controls {
+  margin: 0px 6px 4px 6px;
+}
+
+#window-controls > toolbarbutton {
+  height: 100%;
+  min-width: 28px;
+  margin: 0;
+  position: relative;
+}
+
+#window-controls {
+  border-left: 7px solid;
+  -moz-border-left-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
+}
+#window-controls:-moz-locale-dir(rtl) {
+  border-right: 7px solid;
+  -moz-border-right-colors: rgba(50,50,50,.2) rgba(255,255,255,0.2) transparent;
+}
+
+#minimize-button {
+  display: none;
+}
+#restore-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/window-restore.svg);
+}
+#close-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/close.svg);
+  display: none;
+}
+
+:-moz-any(#minimize-button, #restore-button, #close-button) > .toolbarbutton-icon {
+  height: 14px;
+  width: 14px;
+}
+
+/* FIXME
+:-moz-any(#minimize-button, #restore-button, #close-button):active:hover > .toolbarbutton-icon {
+  filter: url(chrome://browser/skin/symbolic-icons-colors.svg#white);
+}
+*/
