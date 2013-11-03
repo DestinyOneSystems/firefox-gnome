@@ -61,6 +61,7 @@
 }
 
 .tab-background-middle[selected=true] {
+  background-color: transparent;
   background-image: url(chrome://gnome/skin/browser/tabbrowser/tab-active-middle.png) !important;
 }
 
@@ -108,17 +109,6 @@
   -moz-image-region: auto;
 }
 
-#PanelUI-menu-button,
-#preferences-button[cui-areatype="toolbar"] {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/emblem-system.svg);
-  -moz-image-region: auto;
-}
-
-#privatebrowsing-button[cui-areatype="toolbar"] {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/privatebrowsing.svg);
-  -moz-image-region: auto;
-}
-
 #bookmarks-menu-button[cui-areatype="toolbar"] {
   list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/bookmark-new.svg);
   -moz-image-region: auto;
@@ -132,10 +122,9 @@
   -moz-image-region: auto;
 }
 
-.tabs-newtab-button,
-#TabsToolbar > #new-tab-button ,
-#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/list-add.svg);
+#history-panelmenu[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/document-open-recent.svg);
+  -moz-image-region: auto;
 }
 
 /* Downloads button */
@@ -161,6 +150,164 @@
 
 #downloads-button:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background-image: url(chrome://gnome/skin/browser/symbolic-icons/download-glow.svg);
+}
+
+#add-ons-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/addon.svg);
+  -moz-image-region: auto;
+}
+
+#open-file-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/open.svg);
+  -moz-image-region: auto;
+}
+
+#save-page-button[cui-areatype="toolbar"] {
+/* FIXME */
+}
+
+#sync-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/emblem-synchronizing.svg);
+  -moz-image-region: auto;
+}
+
+#feed-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/rss.svg);
+  -moz-image-region: auto;
+}
+
+#social-share-button[cui-areatype="toolbar"] {
+/* FIXME */
+}
+
+#characterencoding-button[cui-areatype="toolbar"]{
+/* FIXME */
+}
+
+#new-window-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/new-window.svg);
+  -moz-image-region: auto;
+}
+
+#new-tab-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tab-new.svg);
+  -moz-image-region: auto;
+}
+.tabs-newtab-button,
+#TabsToolbar > #new-tab-button ,
+#TabsToolbar > #wrapper-new-tab-button > #new-tab-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/list-add.svg);
+}
+
+#privatebrowsing-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/privatebrowsing.svg);
+  -moz-image-region: auto;
+}
+
+#find-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/edit-find.svg);
+  -moz-image-region: auto;
+}
+
+#print-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/printer.svg);
+  -moz-image-region: auto;
+}
+
+#fullscreen-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/view-fullscreen.svg);
+  -moz-image-region: auto;
+}
+
+#developer-button[cui-areatype="toolbar"] {
+/* FIXME */
+}
+
+#preferences-button[cui-areatype="toolbar"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/emblem-system.svg);
+  -moz-image-region: auto;
+}
+
+#PanelUI-menu-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/list.svg);
+  -moz-image-region: auto;
+}
+
+#edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) > #cut-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/edit-cut.svg);
+  -moz-image-region: auto;
+}
+
+#edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) > #copy-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/edit-copy.svg);
+  -moz-image-region: auto;
+}
+
+#edit-controls:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) > #paste-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/edit-paste.svg);
+  -moz-image-region: auto;
+}
+
+#zoom-controls:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) > #zoom-out-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/zoom-out.svg);
+  -moz-image-region: auto;
+}
+
+#zoom-controls:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) > #zoom-in-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/zoom-in.svg);
+  -moz-image-region: auto;
+}
+
+#webrtc-status-button:not(:-moz-any(:not([cui-areatype="toolbar"]),.overflowedItem)) {
+/* FIXME */
+}
+
+#nav-bar-overflow-button {
+/* FIXME */
+}
+
+/* tabview button */
+
+#tabview-button,
+#menu_tabview {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tabview.svg);
+  -moz-image-region: auto;
+}
+
+#tabview-button[groups="0"],
+#menu_tabview[groups="0"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tabview-0.svg);
+  -moz-image-region: auto;
+}
+
+#tabview-button[groups="1"],
+#menu_tabview[groups="1"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tabview-1.svg);
+  -moz-image-region: auto;
+}
+
+#tabview-button[groups="2"],
+#menu_tabview[groups="2"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tabview-2.svg);
+  -moz-image-region: auto;
+}
+
+#tabview-button[groups="3"],
+#menu_tabview[groups="3"] {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/tabview-3.svg);
+  -moz-image-region: auto;
+}
+
+/* All tabs */
+
+#alltabs-button {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-down.svg);
+}
+#alltabs-button > .toolbarbutton-menu-dropmarker {
+  display: none;
+}
+#alltabs-button > .toolbarbutton-icon {
+  display: -moz-box;
 }
 
 /* ::::: Location bar, Search bar ::::: */
