@@ -1131,13 +1131,11 @@ menuitem.addon-control:hover {
 /* Switches */
 
 .addon-control.enable {
-/*  list-style-image: url("moz-icon://stock/gtk-yes?size=button");*/
-  list-style-image: url(chrome://mozapps/skin/extensions/off.png);
+  list-style-image: url(chrome://gnome/skin/mozapps/extensions/off.png);
 }
 
 .addon-control.disable {
-/*  list-style-image: url("moz-icon://stock/gtk-no?size=button");*/
-  list-style-image: url(chrome://mozapps/skin/extensions/on.png);
+  list-style-image: url(chrome://gnome/skin/mozapps/extensions/on.png);
 }
 
 .addon-control.enable:hover,

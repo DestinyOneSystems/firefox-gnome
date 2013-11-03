@@ -5,3 +5,6 @@ style chrome://browser/content/places/places.xul chrome://gnome/skin/browser/pla
 
 style chrome://browser/content/newtab/newTab.xul chrome://gnome/skin/browser/newtab/newTab.css
 style about:newtab chrome://gnome/skin/browser/newtab/newTab.css
+
+style chrome://mozapps/content/extensions/extensions.xul chrome://gnome/skin/mozapps/extensions/extensions.css
+style about:addons chrome://gnome/skin/mozapps/extensions/extensions.css
