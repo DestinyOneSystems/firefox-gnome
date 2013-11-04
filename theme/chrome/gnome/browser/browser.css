@@ -520,6 +520,16 @@
   background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
 }
 
+/* ::::: Downloads indicator ::::: */
+
+#downloadsHistory {
+  color: gray !important;
+}
+
+#downloadsHistory:hover {
+  color: #3a81cc !important;
+}
+
 /* ::::: Toolbarbuttons ::::: */
 
 
