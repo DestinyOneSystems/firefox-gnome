@@ -615,6 +615,46 @@
 
 /* ::::: Toolbarbuttons ::::: */
 
+/* ::::: Sidebar ::::: */
+
+#sidebar-splitter {
+  -moz-appearance: none;
+  border-right: 1px solid #a7aba7;
+  min-width: 4px !important;
+  width: 4px !important;
+}
+
+#sidebar-header {
+  font-weight: bold;
+  color: #2e3436;
+  padding: 10px 3px;
+  margin: 0;
+}
+
+#sidebar-header > .tabs-closebutton {
+  -moz-appearance: none;
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/close.svg);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 2px !important;
+}
+
+#sidebar-header > .tabs-closebutton:hover {
+  background-image: linear-gradient(to bottom, #ffffff, #ebebeb);
+  border-color: rgba(50,50,50,.4);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+#sidebar-header > .tabs-closebutton:active:hover {
+  background-image: linear-gradient(to bottom, #c9c9c9, #e4e4e4);
+  border-color: rgba(50,50,50,.4);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.37);
+}
+
+#sidebar-header > .tabs-closebutton > .toolbarbutton-icon {
+  min-height: 16px;
+  min-width: 16px;
+}
 
 /* ::::: Window controls ::::: */
 
