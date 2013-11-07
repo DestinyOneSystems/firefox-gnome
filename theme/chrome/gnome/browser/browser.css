@@ -486,6 +486,7 @@
 }
 
 /* Identity indicator */
+
 #identity-box {
   margin: 0;
   min-width: 26px;
@@ -518,6 +519,88 @@
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity:hover:active,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity[open="true"] {
   background: linear-gradient(to bottom, rgba(115, 210, 22, 0.25), rgba(115, 210, 22, 0.05));
+}
+
+/* Notification icons */
+
+.notification-anchor-icon {
+  opacity: 0.5;
+}
+
+.default-notification-icon,
+#default-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/information.svg);
+}
+
+.identity-notification-icon,
+#identity-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+.geo-notification-icon,
+#geo-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/geolocation.svg);
+}
+
+#addons-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/addon.svg);
+}
+
+.indexedDB-notification-icon,
+#indexedDB-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/question.svg);
+}
+
+#password-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/key.svg);
+}
+
+#webapps-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/plugin.svg);
+}
+
+#plugins-notification-icon {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/plugin.svg);
+}
+#plugins-notification-icon.plugin-hidden {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/plugin-alert.svg);
+}
+#plugins-notification-icon.plugin-blocked {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/plugin-blocked.svg);
+}
+
+#plugins-notification-icon,
+#plugins-notification-icon:hover,
+#plugins-notification-icon:active {
+  -moz-image-region: auto;
+}
+
+#plugin-install-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+.mixed-content-blocked-notification-icon,
+#mixed-content-blocked-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+.webRTC-shareDevices-notification-icon,
+#webRTC-shareDevices-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+.webRTC-sharingDevices-notification-icon,
+#webRTC-sharingDevices-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+.web-notifications-notification-icon,
+#web-notifications-notification-icon {
+  /* FIXME: Missing icon */
+}
+
+#pointerLock-notification-icon {
+  /* FIXME: Missing icon */
 }
 
 /* ::::: Downloads indicator ::::: */
