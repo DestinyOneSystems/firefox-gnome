@@ -178,20 +178,14 @@
   -moz-margin-start: 1px !important;
 }
 
-#back-btn:-moz-locale-dir(ltr) {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg);
-}
-
-#forward-btn:-moz-locale-dir(ltr) {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg);
-}
-
-#back-btn:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg);
-}
-
+#back-btn:-moz-locale-dir(ltr),
 #forward-btn:-moz-locale-dir(rtl) {
-  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg);
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-previous.svg) !important;
+}
+
+#back-btn:-moz-locale-dir(rtl),
+#forward-btn:-moz-locale-dir(ltr) {
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/go-next.svg) !important;
 }
 
 #back-btn[disabled="true"] > .toolbarbutton-icon,
