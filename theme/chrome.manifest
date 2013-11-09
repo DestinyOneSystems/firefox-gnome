@@ -10,3 +10,7 @@ style about:newtab                                        chrome://gnome/skin/br
 
 style chrome://mozapps/content/extensions/extensions.xul  chrome://gnome/skin/mozapps/extensions/extensions.css
 style about:addons                                        chrome://gnome/skin/mozapps/extensions/extensions.css
+
+# :'(
+#style chrome://browser/content/aboutPrivateBrowsing.xhtml chrome://gnome/skin/browser/aboutPrivateBrowsing.css
+#style about:privatebrowsing                               chrome://gnome/skin/browser/aboutPrivateBrowsing.css

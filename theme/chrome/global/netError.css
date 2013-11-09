@@ -64,7 +64,7 @@ ul {
   padding: 0 24px;
 }
 
-#errorPageContainer h1{
+#errorPageContainer h1 {
   padding: 0 24px;
 }
 
@@ -86,19 +86,23 @@ ul {
 
 #errorShortDesc > p {
   overflow: auto;
-  padding-bottom: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
   font-size: 110%;
+  font-weight: bold;
   white-space: pre-wrap;
 }
 
 #errorLongDesc {
-  -moz-padding-end: 3em;
-  font-size: 100%;
 }
 
 #errorLongDesc > p {
-  padding-bottom: 1em;
+  font-size: 110%;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  /*
   color: grey;
+  */
 }
 
 #errorTryAgain {
@@ -108,21 +112,21 @@ ul {
   border: 1px solid;
   margin-left: 8em;
   border-color: rgba(0,0,0,.2);
-  border-left: 1px solid rgba(0,0,0,.15) ;
-  box-shadow: 0 1px 0 rgba(255,255,255,1)inset ,
+  border-left: 1px solid rgba(0,0,0,.15);
+  box-shadow: 0 1px 0 rgba(255,255,255,1) inset,
               0 1px rgba(255,255,255,1);
   background-image: linear-gradient(to bottom, #f5f5f5, #dcdcdc);
-  padding: 4px 9px ;
+  padding: 4px 9px;
   transition-property: color, border, box-shadow, background-image;
   transition-duration: 200ms;
 }
 
-#errorTryAgain:hover{
+#errorTryAgain:hover {
   color: rgba(0,0,0,0.75);
   border-color: rgba(0,0,0,0.5);
 }
 
-#errorTryAgain:active{
+#errorTryAgain:active {
   color: rgba(0,0,0,0.75);
   border-color: rgba(0,0,0,0.3);
   box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.2) inset,
@@ -130,6 +134,7 @@ ul {
   background-image: linear-gradient(to bottom, #F5F5F5, #DCDCDC);
   text-shadow: 0px 1px 0px rgba(255,255,255,0.6);
 }
+
 #brand {
   position: absolute;
   right: 0;
@@ -194,4 +199,58 @@ ul {
   color: #2e3436 !important;
   top: 0 !important;
   left: 0 !important;
+}
+
+/* ::::: aboutPrivateBrowsing.css ::::: */
+
+@-moz-document url("about:privatebrowsing") {
+
+#errorTitle {
+  -moz-margin-start: 150px;
+}
+
+#errorLongContent {
+  -moz-margin-start: 150px;
+}
+
+body.private > #errorPageContainer {
+  background-image: url(chrome://gnome/skin/browser/symbolic-icons/private-browsing.svg) !important;
+}
+
+body.normal > #errorPageContainer {
+  background-image: url("moz-icon://stock/gtk-dialog-question?size=dialog");
+}
+
+#errorPageContainer {
+  background-position: left top !important;
+}
+
+h1 {
+  color: #9200a0;
+}
+
+#footerDesc > p {
+  margin-top: 1.2em !important;
+  margin-bottom: 1.2em !important;
+}
+
+#moreInfo {
+  padding: 0 !important;
+  background: none !important;
+}
+
+#moreInfo > p {
+  margin-top: 1.2em !important;
+  margin-bottom: 1.2em !important;
+}
+
+#moreInfoLink {
+  color: #3a81cc !important;
+  text-decoration: none !important;
+}
+
+#moreInfoLink:hover {
+  text-decoration: underline !important;
+}
+
 }
