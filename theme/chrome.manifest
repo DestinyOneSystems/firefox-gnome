@@ -1,10 +1,12 @@
-skin     gnome           Adwaita     chrome/gnome/
+skin  global               Adwaita                        chrome/global/  os!=WINNT
 
-style chrome://browser/content/browser.xul chrome://gnome/skin/browser/browser.css
-style chrome://browser/content/places/places.xul chrome://gnome/skin/browser/places/organizer.css
+skin  gnome                Adwaita                        chrome/gnome/
 
-style chrome://browser/content/newtab/newTab.xul chrome://gnome/skin/browser/newtab/newTab.css
-style about:newtab chrome://gnome/skin/browser/newtab/newTab.css
+style chrome://browser/content/browser.xul                chrome://gnome/skin/browser/browser.css
+style chrome://browser/content/places/places.xul          chrome://gnome/skin/browser/places/organizer.css
 
-style chrome://mozapps/content/extensions/extensions.xul chrome://gnome/skin/mozapps/extensions/extensions.css
-style about:addons chrome://gnome/skin/mozapps/extensions/extensions.css
+style chrome://browser/content/newtab/newTab.xul          chrome://gnome/skin/browser/newtab/newTab.css
+style about:newtab                                        chrome://gnome/skin/browser/newtab/newTab.css
+
+style chrome://mozapps/content/extensions/extensions.xul  chrome://gnome/skin/mozapps/extensions/extensions.css
+style about:addons                                        chrome://gnome/skin/mozapps/extensions/extensions.css

@@ -14,16 +14,6 @@
 }
 
 #warningBox {
-  /*
-  background-color: transparent;
-  color: -moz-FieldText;
-  border: 0px solid ThreeDShadow;
-  border-radius: 10px;
-  padding: 3em;
-  -moz-padding-start: 30px;
-  margin-left: 1em;
-  margin-right: 1em;
-  */
 }
 
 #warningInnerBox {
@@ -52,10 +42,6 @@
 }
 
 #exclam {
-  /*
-  list-style-image: url("moz-icon://stock/gtk-dialog-warning?size=dialog");
-  -moz-margin-end: 3em;
-  */
 }
 
 #configTreeBody::-moz-tree-cell-text(user) {

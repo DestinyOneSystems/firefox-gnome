@@ -75,7 +75,7 @@ toolbarbutton:-moz-lwtheme:not(:hover):not([checked="true"]):not([open="true"]):
 
 .toolbarbutton-menu-dropmarker {
   -moz-appearance: none !important;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/dropmarker.svg);
   -moz-image-region: auto;
   padding: 0;
   margin: 0;
@@ -120,7 +120,7 @@ toolbarbutton[type="menu-button"][disabled="true"]:hover:active {
   -moz-image-region: auto;
   list-style-image: none;
   -moz-box-align: center;
-  list-style-image: url(chrome://browser/skin/symbolic-icons/dropmarker.svg);
+  list-style-image: url(chrome://gnome/skin/browser/symbolic-icons/dropmarker.svg);
   padding: 0;
   margin: 0;
   -moz-margin-end: 3px;

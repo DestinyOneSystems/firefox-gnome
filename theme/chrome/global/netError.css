@@ -47,6 +47,9 @@ ul {
 }
 
 #errorPageContainer {
+  background-repeat: no-repeat;
+  background-position: 30px top;
+  background-origin: content-box;
   position: relative;
   min-width: 13em;
   max-width: 65em;
